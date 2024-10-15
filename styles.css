@@ -1,31 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Edge of Darkness | Gothic AI Art & Stories</title>
-    <meta name="description" content="Explore the fusion of light and darkness through AI art and dystopian stories at The Edge of Darkness. Join our community for exclusive content.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for Social Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1>The Edge of Darkness</h1>
-            <p>Hovering at the boundary between light and shadow</p>
-            <a href="#about" class="cta-button">Explore More</a>
-        </div>
-    </section>
+/* Hero Section Styles */
+#hero {
+    background: url('https://raw.githubusercontent.com/Intelliwebchatt/Darkness/refs/heads/main/AOluq1QDZsLqj94wYdAz--1--ujpho%7E2%20(1).jpg') no-repeat center center/cover;
+    height: 100vh;
+    position: relative;
+}
 
-    <!-- Navigation Menu -->
-    <!-- ... (rest of the content remains the same) ... -->
+.hero-content {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    max-width: 600px;
+    animation: fadeInUp 2s ease-out;
+}
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-</body>
-</html>
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #ff6347;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #ffa07a;
+}
