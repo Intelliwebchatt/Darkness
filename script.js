@@ -27,9 +27,9 @@ function showSlides(n) {
     if (n > slides.length) { slideIndex = 1; }
     if (n < 1) { slideIndex = slides.length; }
     for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
+        slides[i].style.display = 'none';
     }
-    slides[slideIndex - 1].classList.add('active');
+    slides[slideIndex - 1].style.display = 'block';
 }
 
 // Auto-play slides
@@ -37,7 +37,7 @@ let slideInterval = setInterval(function() {
     plusSlides(1);
 }, 5000);
 
-// Pause on hover or touch
+// Pause on hover
 const carousel = document.querySelector('.carousel');
 carousel.addEventListener('mouseover', function() {
     clearInterval(slideInterval);
@@ -47,19 +47,12 @@ carousel.addEventListener('mouseout', function() {
         plusSlides(1);
     }, 5000);
 });
-carousel.addEventListener('touchstart', function() {
-    clearInterval(slideInterval);
-});
-carousel.addEventListener('touchend', function() {
-    slideInterval = setInterval(function() {
-        plusSlides(1);
-    }, 5000);
-});
 
 // Newsletter form submission
 const newsletterForm = document.getElementById('newsletter-form');
 newsletterForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    // Here you would integrate with your email marketing service
     alert('Thank you for subscribing! Check your email for the free download.');
     newsletterForm.reset();
 });
@@ -68,6 +61,7 @@ newsletterForm.addEventListener('submit', function(e) {
 const contactForm = document.getElementById('contact-form');
 contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
+    // Here you would integrate with your email handling service
     alert('Thank you for your message! We will get back to you soon.');
     contactForm.reset();
 });
